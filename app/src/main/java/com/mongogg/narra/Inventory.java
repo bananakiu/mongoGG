@@ -1,25 +1,19 @@
 package com.mongogg.narra;
 
 import io.realm.RealmObject;
+import io.realm.annotations.PrimaryKey;
 
 /**
  * Created by leandre on 1/28/18.
  */
 
 public class Inventory extends RealmObject {
+    @PrimaryKey
     private String id;
     private int quantity;
     private double price;
     private Store store;
     private Item item;
-
-    public Inventory(String id, int quantity, double price, Store store, Item item) {
-        this.id = id;
-        this.quantity = quantity;
-        this.price = price;
-        this.store = store;
-        this.item = item;
-    }
 
     public String getId() {
         return id;

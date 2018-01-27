@@ -1,21 +1,18 @@
 package com.mongogg.narra;
 
 import io.realm.RealmObject;
+import io.realm.annotations.PrimaryKey;
 
 /**
  * Created by leandre on 1/28/18.
  */
 
 public class Item_Supplier extends RealmObject {
+    @PrimaryKey
+    private String id;
     private Supplier supplier;
     private Item item;
     private double price;
-
-    public Item_Supplier(Supplier supplier, Item item, double price) {
-        this.supplier = supplier;
-        this.item = item;
-        this.price = price;
-    }
 
     public Supplier getSupplier() {
         return supplier;

@@ -23,12 +23,12 @@ public class LoginActivity extends AppCompatActivity {
         setContentView(R.layout.activity_login);
 
         final FirebaseAuth firebaseAuth = FirebaseAuth.getInstance();
-        Button loginButton = findViewById(R.id.button2);
+        Button loginButton = findViewById(R.id.login_register_button);
         loginButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                EditText emailEditText = findViewById(R.id.editText);
-                EditText pinEditText = findViewById(R.id.editText2);
+                EditText emailEditText = findViewById(R.id.login_email_edit_text);
+                EditText pinEditText = findViewById(R.id.login_password_edit_text);
                 final String email = emailEditText.getText().toString();
                 final String pin = pinEditText.getText().toString();
                 firebaseAuth.signInWithEmailAndPassword(email, pin).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
