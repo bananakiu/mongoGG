@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "931276752770",
+    "firebase_url": "https://kasosyo-58471.firebaseio.com",
+    "project_id": "kasosyo-58471",
+    "storage_bucket": "kasosyo-58471.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:931276752770:android:46fd3a0c934d31c2",
+        "android_client_info": {
+          "package_name": "com.mongogg.narra"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "931276752770-e14sgvhj55pqbid8qg63mqnol63k5j18.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.mongogg.narra",
+            "certificate_hash": "e11f1921415d80684906e9a3676d2e6c624b5609"
+          }
+        },
+        {
+          "client_id": "931276752770-ekdd71ciq805j85jq3rhr4vhp8a7b9fu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDDR5byICXTne5aU_H9hPTQyY6-drAZUSQ"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "931276752770-ekdd71ciq805j85jq3rhr4vhp8a7b9fu.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
