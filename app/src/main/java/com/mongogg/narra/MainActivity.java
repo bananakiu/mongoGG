@@ -81,6 +81,7 @@ public class MainActivity extends AppCompatActivity
         super.onStop();
         if (mAuthStateListener != null) {
             mAuth.removeAuthStateListener(mAuthStateListener);
+            mAuth.getInstance().signOut();
         }
     }
 
