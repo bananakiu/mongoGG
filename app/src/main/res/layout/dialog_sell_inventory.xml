@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingHorizontal="30dp"
+    android:paddingVertical="20dp">
+
+    <EditText
+        android:id="@+id/new_sale_quantity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Quantity"
+        android:inputType="number" />
+
+    <Button
+        android:id="@+id/sell_item_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Sell Item" />
+</LinearLayout>

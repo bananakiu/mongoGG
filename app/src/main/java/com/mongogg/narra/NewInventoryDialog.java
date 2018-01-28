@@ -33,14 +33,24 @@ public class NewInventoryDialog extends Dialog {
                 realm.executeTransaction(new Realm.Transaction() {
                     @Override
                     public void execute(Realm realm) {
-                        EditText name = findViewById(R.id.new_product_name_edittext);
+                        final EditText name = findViewById(R.id.new_product_name_edittext);
                         EditText qty = findViewById(R.id.new_product_quantity_edittext);
                         EditText price = findViewById(R.id.new_product_price_edittext);
-                        Inventory inventory = realm.createObject(Inventory.class);
-                        inventory.setId(UUID.randomUUID().toString());
-                        inventory.setItem(realm.where(Item.class).equalTo("name", name.getText().toString()).findFirst());
+                        Inventory inventory = realm.createObject(Inventory.class, UUID.randomUUID().toString());
+//                        inventory.setId(UUID.randomUUID().toString());
+                        if (realm.where(Item.class).equalTo("name", name.getText().toString()).findFirst() != null) {
+                            inventory.setItem(realm.where(Item.class).equalTo("name", name.getText().toString()).findFirst());
+                        }
+                        else {
+
+                            Item item = realm.createObject(Item.class, UUID.randomUUID().toString());
+                            item.setName("food");
+                            System.out.println(item.getName());
+                            inventory.setItem(item);
+                        }
                         inventory.setQuantity(Integer.parseInt(qty.getText().toString()));
                         inventory.setPrice(Double.parseDouble(price.getText().toString()));
+
                     }
                 });
                 dismiss();

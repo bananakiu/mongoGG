@@ -28,7 +28,8 @@ public class InventoryActivity extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                NewInventoryDialog d = new NewInventoryDialog(InventoryActivity.this);
+                d.show();
             }
         });
     }

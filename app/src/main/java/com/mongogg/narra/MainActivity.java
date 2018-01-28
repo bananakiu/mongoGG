@@ -54,7 +54,10 @@ public class MainActivity extends AppCompatActivity
         //Realm instance
         Realm.init(this);
         Realm realm = Realm.getDefaultInstance();
-        RealmConfiguration config = new RealmConfiguration.Builder().build();
+        RealmConfiguration config = new RealmConfiguration
+                .Builder()
+                .deleteRealmIfMigrationNeeded()
+                .build();
 
         mAuth = FirebaseAuth.getInstance();
         mAuthStateListener = new FirebaseAuth.AuthStateListener() {
